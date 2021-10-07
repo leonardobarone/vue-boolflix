@@ -1,32 +1,28 @@
 <template>
   <div class="films">
-      <ul>
-          <li v-for="(film, index) in films" :key="index">{{film.original_title}}</li>
-      </ul>
-      <Film />
+        <Card v-for="(film, index) in films" :key="index" :card="film" />
   </div>
 </template>
 
 <script>
-import Film from './Film.vue'
+import Card from './Card.vue';
 import axios from 'axios';
 
 export default {
     name: 'Films',
     components: {
-        Film
+        Card
     },
     data() {
         return {
             films: []
         }
     },
-    props: {
-        inputSearch: String
-    },
+    props: ['inputSearch'],
     watch: {
-        prova() {
-            axios.get('https://api.themoviedb.org/3/search/movie', {
+        inputSearch() {
+            axios
+            .get('https://api.themoviedb.org/3/search/movie', {
                 params: {
                     api_key: '933f816273dcac2d9bb3de85d7f0a2c6',
                     query: this.inputSearch,
@@ -35,6 +31,7 @@ export default {
             })
             .then((response) => {
                 this.films = response.data.results
+              
             });
         } 
     }
@@ -42,5 +39,4 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 </style>

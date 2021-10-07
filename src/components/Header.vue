@@ -3,7 +3,7 @@
       <h1>BOOLFLIX</h1>
       <div class="search">
           <input v-model="inputSearch" type="text">
-          <button @click="$emit('inputSearchFromHeader', inputSearch)">Cerca</button>
+          <button @click.prevent="$emit('inputSearchFromHeader', inputSearch)">Cerca</button>
       </div>
   </header>
 </template>
