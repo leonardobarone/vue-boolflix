@@ -25,6 +25,9 @@ export default {
         align-items: center;
         justify-content: space-between;
         padding: .625rem;
-        border: 1px solid black;
+        background-color: black;
+    }
+    h1 {
+        color: var(--rosso);
     }
 </style>

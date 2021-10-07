@@ -1,8 +1,17 @@
 @import './variables.scss';
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600;700;800&display=swap');
+@import '~bootstrap/scss/bootstrap';
+
 
 // RESET
 * {
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
+}
+
+body {
+    color: white;
+    font-family: 'Dosis', sans-serif;
+    background-color: var(--nero);
 }
