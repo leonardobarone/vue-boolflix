@@ -3,12 +3,16 @@
       <div class="films container-fluid">
           <div class="row">
                 <h2>FILMS</h2>
+          </div>
+          <div class="row">
                 <Card v-for="(film, index) in films" :key="index" :card="film" />
           </div>
       </div>
       <div class="series container-fluid">
           <div class="row">
-            <h2>SERIES</h2>
+              <h2>SERIES</h2>
+          </div>
+          <div class="row">
             <Card v-for="(serie, index) in series" :key="index" :card="serie" />
           </div>
       </div>
