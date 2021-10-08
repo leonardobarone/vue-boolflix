@@ -50,13 +50,13 @@ export default {
     }
     
     button {
-        background-color: var(--rosso);
-        font-weight: bold;
-        color: black;
-        padding: 7px 14px;
+        background-color: var(--nero);
+        // font-weight: bold;
+        color: white;
+        padding: 6px 12px;
         border-style: none;
         margin-left: 10px;
-        border-radius: 5px;
+        border: 1px solid white;
     }
 
     .row {
