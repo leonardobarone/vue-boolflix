@@ -22,7 +22,7 @@
                     <i v-if="index <= Math.floor(card.vote_average / 2)" class="fas fa-star"></i>
                     <i v-else class="far fa-star"></i>
             </div>
-            <div class="overview">
+            <div v-if="card.overview" class="overview">
                 <span>Overview: </span> {{card.overview}}
             </div>
         </div>
