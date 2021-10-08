@@ -1,9 +1,15 @@
 <template>
   <header>
-      <h1>BOOLFLIX</h1>
-      <div class="search">
-          <input v-model="inputSearch" type="text">
-          <button @click.prevent="$emit('inputSearchFromHeader', inputSearch)">Cerca</button>
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-12 col-md-2 title">
+                <h1>BOOLFLIX</h1> 
+              </div>
+              <div class="col-12 col-md-10 search">
+                <input v-model="inputSearch" type="text" placeholder="Cerca film o serie tv">
+                <button @click.prevent="$emit('inputSearchFromHeader', inputSearch)">Cerca</button>
+              </div>
+          </div>
       </div>
   </header>
 </template>
@@ -21,13 +27,40 @@ export default {
 
 <style scoped lang="scss">
     header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
         padding: .625rem;
         background-color: black;
     }
     h1 {
         color: var(--rosso);
     }
+
+    .search {
+        text-align: right;
+    }
+
+    @media screen and (max-width: 768px) {
+        .search,
+        .title {
+            text-align: center;
+        }
+    }
+    
+    input {
+        padding: 5px;
+    }
+    
+    button {
+        background-color: var(--rosso);
+        font-weight: bold;
+        color: black;
+        padding: 7px 14px;
+        border-style: none;
+        margin-left: 10px;
+        border-radius: 5px;
+    }
+
+    .row {
+        align-items: center;
+    }
+
 </style>

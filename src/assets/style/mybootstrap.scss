@@ -10,7 +10,7 @@
 }
 
 .container {
-    width: 992px;
+    max-width: 992px;
     margin: 0 auto;
 }
 
@@ -21,6 +21,10 @@
 
 .align-items-center {
     align-items: center;
+}
+
+.justify-content-space-between {
+    justify-content: space-between;
 }
 
 /* DA VEDERE */
