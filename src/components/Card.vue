@@ -9,10 +9,10 @@
        
         <div class="description">
             <div class="title">
-                {{card.title ? card.title : card.name}}
+                <span>Titolo: </span> {{card.title ? card.title : card.name}}
             </div>
             <div class="original_title">
-                {{card.original_title || card.original_name}}
+                <span>Titolo originale: </span>{{card.original_title || card.original_name}}
             </div>
             <div class="original_language">
                 <img v-if="flags.includes(card.original_language)" :src="require(`../assets/img/flag/${card.original_language}.png`)" alt="">
@@ -21,6 +21,9 @@
             <div class="vote_average" v-for="(number, index) in 5" :key="index">
                     <i v-if="index <= Math.floor(card.vote_average / 2)" class="fas fa-star"></i>
                     <i v-else class="far fa-star"></i>
+            </div>
+            <div class="overview">
+                <span>Overview: </span> {{card.overview}}
             </div>
         </div>
          </div>
@@ -73,6 +76,7 @@ export default {
         display: block;
         border: 1px solid white;
         margin: 10px;
+        overflow: auto;
     }
 
     .poster_path {
@@ -90,9 +94,14 @@ export default {
 
     .vote_average {
         display: inline;
+        color: yellow;
     }
 
     .original_language img {
         width: 15px;
+    }
+
+    span {
+        font-weight: bold;
     }
 </style>

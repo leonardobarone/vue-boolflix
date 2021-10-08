@@ -2,7 +2,7 @@
   <div class="main">
       <div class="films container">
          
-                <h2>FILMS</h2>
+                <h2>Films</h2>
         
           <div class="row">
                 <Card v-for="(film, index) in films" :key="index" :card="film" />
@@ -10,7 +10,7 @@
       </div>
       <div class="series container">
          
-              <h2>SERIES</h2>
+              <h2>Series</h2>
          
           <div class="row">
             <Card v-for="(serie, index) in series" :key="index" :card="serie" />
